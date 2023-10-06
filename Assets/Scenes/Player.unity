@@ -513,11 +513,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1629124832737191038, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.67
       objectReference: {fileID: 0}
     - target: {fileID: 1629124832737191038, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 1629124832737191038, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_LocalPosition.z
@@ -550,18 +550,6 @@ PrefabInstance:
     - target: {fileID: 1629124832737191038, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505698740203207817, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5233131246320120906, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: _maxTimeToAttack
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name

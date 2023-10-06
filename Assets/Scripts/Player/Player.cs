@@ -56,20 +56,23 @@ public class Player : MonoBehaviour
 
         yield return new WaitUntil(CanInteraction);
 
+
+        _canMove = true;
+        _rigidbody.gravityScale = _gravityScale;
+        _timeAttackLeft = _maxTimeToAttack;
+
         if (_canAttack)
         {
             Debug.Log("Atacaste");
+            AddJumpForce();
         }
         else
         {
             Debug.Log("No atacaste");
         }
 
-        _canMove = true;
-        _rigidbody.gravityScale = _gravityScale;
-        _timeAttackLeft = _maxTimeToAttack;
-        _canAttack = false;
         _isWaitingToAttack = false;
+        _canAttack = false;
     }
 
     private bool CanInteraction()
@@ -106,9 +109,7 @@ public class Player : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
-            var velocity = _rigidbody.velocity;
-            velocity.y = _jumpForce;
-            _rigidbody.velocity = velocity;
+            AddJumpForce();
         }
 
         if (context.canceled && _rigidbody.velocity.y > 0f)
@@ -122,6 +123,13 @@ public class Player : MonoBehaviour
         {
             _canAttack = true;
         }
+    }
+
+    private void AddJumpForce()
+    {
+        var velocity = _rigidbody.velocity;
+        velocity.y = _jumpForce;
+        _rigidbody.velocity = velocity;
     }
 
     private bool IsGrounded()
