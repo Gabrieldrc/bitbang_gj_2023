@@ -172,3 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deadLayer: 8
+  _score: 50
+  _damage: 10
