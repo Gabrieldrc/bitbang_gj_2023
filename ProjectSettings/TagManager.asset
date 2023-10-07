@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-
-  - Destroyer
   - WaterDrop
   - Enemy
   layers:
@@ -15,10 +13,10 @@ TagManager:
   - Player
   - Water
   - UI
-  - Floor
   - Enemy
-  - PlayerTrigger
+  - Floor
   - DeadEnemy
+  - PlayerDetector
   - 
   - 
   - 

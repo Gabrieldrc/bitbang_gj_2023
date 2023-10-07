@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7564699829399061366}
   - component: {fileID: 7779198716259346571}
   - component: {fileID: 443886577391465085}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ba11e7f7bae3145a71dd19fe5535fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deadLayer: 9
+  _deadLayer: 8
