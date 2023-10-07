@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-10)]
 public class GameManager : MonoBehaviour
 {
     #region Singleton
@@ -13,6 +12,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            _liveSO.value = _maxliveSO.value;
         }
         else
         {
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     #endregion
 
     [SerializeField] private Transform _playerPosRef;
+    [SerializeField] private FloatValueSO _liveSO;
+    [SerializeField] private FloatValueSO _maxliveSO;
+    [SerializeField] protected IntValueSO _scoreSO;
+    [SerializeField] private float _loseLiveScale = 2f;
 
     public Transform PlayerPosRef
     {
@@ -30,11 +34,15 @@ public class GameManager : MonoBehaviour
         set => _playerPosRef = value;
     }
 
-    public int totalScore = 0;
-
-    public void AddPoints(int points)
+    private void Update()
     {
-        totalScore += points;
-        //TODO make points sounds
+        _liveSO.value -= Time.deltaTime * _loseLiveScale;
+        _liveSO.Notify();
+    }
+
+    public void AddScore(int score)
+    {
+        _scoreSO.value += score;
+        _scoreSO.Notify();
     }
 }

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3966797989650608892, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: _live
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 5298644879666613958, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_Name
       value: OilDrop Variant
