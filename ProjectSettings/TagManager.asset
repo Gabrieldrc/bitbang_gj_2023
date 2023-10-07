@@ -44,3 +44,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 340368115
+    locked: 0
+  - name: DamagePlayer
+    uniqueID: 1712581059
+    locked: 0
+  - name: Player
+    uniqueID: 1280862503
+    locked: 0
+  - name: SuperPower
+    uniqueID: 3154757145
+    locked: 0
+  - name: DeadEnemy
+    uniqueID: 1874607925
+    locked: 0
+  - name: Enemy
+    uniqueID: 3134775391
+    locked: 0
+  - name: Collectable
+    uniqueID: 674543029
+    locked: 0
