@@ -51,6 +51,6 @@ MonoBehaviour:
   - {fileID: 5298644879666613958, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
   - {fileID: 5298644879666613958, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
   - {fileID: 4154950245181304071, guid: ea5fee5c32ac089458e633adb55567c6, type: 3}
-  - {fileID: 5450815512716912521, guid: 6696876626400c94dac460fb332176e5, type: 3}
+  - {fileID: 617562611270580180, guid: e48432b4e38888c43ac7e5c8165a7fc3, type: 3}
   _minCooldown: 3
   _maxCooldown: 5
