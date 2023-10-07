@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private bool _isWaitingToAttack = false;
     private bool _canAttack = false;
     private float _timeAttackLeft = 0f;
+    private Vector2 _targetDirection;
 
 
     void Awake()
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _gravityScale = _rigidbody.gravityScale;
         _timeAttackLeft = _maxTimeToAttack;
+        _targetDirection = transform.position;
     }
 
     private void OnEnable()
@@ -38,6 +40,70 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         _enemyDetector.OnEnemyDetected -= AttackHandler;
+    }
+
+    private void FixedUpdate()
+    {
+        if (_canMove)
+        {
+            _rigidbody.velocity =
+                new Vector2(Mathf.Clamp(Mathf.Abs(_hor_input * _speed), 0f, _speed) * (_hor_input > 0 ? 1 : -1),
+                    _rigidbody.velocity.y);
+        }
+    }
+
+    public void MovementHandler(InputAction.CallbackContext context)
+    {
+        var mov = context.ReadValue<Vector2>();
+        if (context.canceled)
+        {
+            _hor_input = 0f;
+        }
+
+        if (context.performed)
+        {
+            _hor_input = mov.x;
+        }
+    }
+
+    public void TargetHandler(InputAction.CallbackContext context)
+    {
+        // if (!_isWaitingToAttack) return;
+        if (!context.performed) return;
+        var device = context.control.device;
+
+        if (device is Gamepad)
+        {
+            _targetDirection = context.ReadValue<Vector2>().normalized; 
+        }
+        else if (device is Mouse)
+        {
+            var mousePos = context.ReadValue<Vector2>();
+            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+            _targetDirection = (mousePos - (Vector2) transform.position).normalized;
+        }
+    }
+    
+    public void JumpHandler(InputAction.CallbackContext context)
+    {
+        Debug.Log("Salto");
+        if (context.performed && IsGrounded())
+        {
+            Debug.Log("Salto");
+            AddJumpForce();
+        }
+
+        if (context.canceled && _rigidbody.velocity.y > 0f)
+        {
+            var velocity = _rigidbody.velocity;
+            velocity.y /= _jumpRealeseMod;
+            _rigidbody.velocity = velocity;
+        }
+
+        if (_isWaitingToAttack && context.performed)
+        {
+            _canAttack = true;
+        }
     }
 
     private void AttackHandler()
@@ -65,7 +131,7 @@ public class Player : MonoBehaviour
         if (_canAttack)
         {
             Debug.Log("Atacaste");
-            _enemyDetector.ThrowEnemy(new Vector2(1,1) * _throwForceScale);
+            _enemyDetector.ThrowEnemy(_targetDirection * _throwForceScale);
             AddJumpForce();
         }
         else
@@ -81,50 +147,6 @@ public class Player : MonoBehaviour
     {
         _timeAttackLeft -= Time.deltaTime;
         return _canAttack || _timeAttackLeft <= 0;
-    }
-
-    private void FixedUpdate()
-    {
-        if (_canMove)
-        {
-            _rigidbody.velocity =
-                new Vector2(Mathf.Clamp(Mathf.Abs(_hor_input * _speed), 0f, _speed) * (_hor_input > 0 ? 1 : -1),
-                    _rigidbody.velocity.y);
-        }
-    }
-
-    public void MovementHandler(InputAction.CallbackContext context)
-    {
-        var mov = context.ReadValue<Vector2>();
-        if (context.canceled)
-        {
-            _hor_input = 0f;
-        }
-
-        if (context.performed)
-        {
-            _hor_input = mov.x;
-        }
-    }
-
-    public void JumpHandler(InputAction.CallbackContext context)
-    {
-        if (context.performed && IsGrounded())
-        {
-            AddJumpForce();
-        }
-
-        if (context.canceled && _rigidbody.velocity.y > 0f)
-        {
-            var velocity = _rigidbody.velocity;
-            velocity.y /= _jumpRealeseMod;
-            _rigidbody.velocity = velocity;
-        }
-
-        if (_isWaitingToAttack && context.performed)
-        {
-            _canAttack = true;
-        }
     }
 
     private void AddJumpForce()
@@ -149,6 +171,10 @@ public class Player : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(_groundCheck.position, _groundCheckRadius);
+
+        Gizmos.color = Color.red;
+        Vector2 position = transform.position;
+        Gizmos.DrawLine(position, position + (_targetDirection * 2));
     }
 #endif
 }

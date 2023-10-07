@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4505698740203207817}
   - component: {fileID: 5233131246320120906}
   - component: {fileID: 1558305114643534355}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Attack_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,13 +286,13 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7751599062038208613}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 5490410381293499411}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: TargetHandler
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -452,7 +452,7 @@ MonoBehaviour:
   _groundCheckRadius: 0.1
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   _jumpRealeseMod: 50
   _enemyDetector: {fileID: 1558305114643534355}
   _maxTimeToAttack: 0.5
