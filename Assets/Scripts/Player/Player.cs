@@ -203,6 +203,7 @@ public class Player : MonoBehaviour
 		_canMove = false;
 		_rigidbody.velocity = Vector2.zero;
 		_rigidbody.gravityScale = 0f;
+		_anim.ResetTrigger(_kickedAnimTrigger);
 	}
 
 	private IEnumerator CO_Ataque()
@@ -236,6 +237,8 @@ public class Player : MonoBehaviour
 
 		_isWaitingToAttack = false;
 		_canAttack = false;
+		_anim.SetBool(_kickAnimParameter, false);
+		//_anim.ResetTrigger(_kickedAnimTrigger);
 	}
 
 	private bool CanInteraction()
