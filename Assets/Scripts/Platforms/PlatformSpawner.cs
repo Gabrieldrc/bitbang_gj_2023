@@ -13,6 +13,8 @@ namespace Platforms
         [SerializeField] private GameObject _platformUp;
         [SerializeField] private GameObject _platformDown;
         [SerializeField] private float _minCooldown, _maxCooldown;
+        [SerializeField, Range(0f, 1f)] private float _trashCanChance = .5f;
+        [SerializeField] private GameObject _trashCan;
 
         private float _cooldown;
         private float _timer;
@@ -51,7 +53,8 @@ namespace Platforms
             var isComingFromYAxis = Random.Range(0, 2) > 0;
             if (isComingFromYAxis)
             {
-                platformPosition.y = Mathf.Lerp(_screenHeigh.min, _screenHeigh.max, (1f / (_divY + 1)) * Random.Range(1, _divY +1));
+                platformPosition.y = Mathf.Lerp(_screenHeigh.min, _screenHeigh.max,
+                    (1f / (_divY + 1)) * Random.Range(1, _divY + 1));
                 var isComingFromLeft = Random.Range(0, 2) > 0;
                 if (isComingFromLeft)
                 {
@@ -66,7 +69,8 @@ namespace Platforms
             }
             else
             {
-                platformPosition.x = Mathf.Lerp(_screenWidth.min, _screenWidth.max,(1f / (_divX + 1f)) * Random.Range(1, _divX + 1));
+                platformPosition.x = Mathf.Lerp(_screenWidth.min, _screenWidth.max,
+                    (1f / (_divX + 1f)) * Random.Range(1, _divX + 1));
                 var isComingFromDown = Random.Range(0, 2) > 0;
                 if (isComingFromDown)
                 {
@@ -80,7 +84,20 @@ namespace Platforms
                 }
             }
 
-            Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+            var platform = Instantiate(platformPrefab, platformPosition, Quaternion.identity);
+            if (!IsTrashcanVisible() && Random.Range(0, 1) <= _trashCanChance)
+            {
+                var platformComponent = platform.GetComponent<Platform>();
+                platformComponent.SetObjectOnTop(_trashCan);
+            }
+        }
+
+        private bool IsTrashcanVisible()
+        {
+            return _trashCan.transform.position.x > _screenWidth.min
+                   && _trashCan.transform.position.x < _screenWidth.max
+                   && _trashCan.transform.position.y > _screenHeigh.min
+                   && _trashCan.transform.position.y < _screenHeigh.max;
         }
     }
 }
