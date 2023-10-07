@@ -24,7 +24,14 @@ public class Player : MonoBehaviour
 
 	[Space(10), Header("Player Animations:")]
 	[SerializeField] private Animator _anim;
-	[SerializeField] private string _walkingAnimParameter, _jumpAnimParameter, _kickAnimParameter;
+	[SerializeField]
+	private string _walkingAnimParameter,
+		_jumpAnimParameter,
+		_kickAnimParameter,
+		_groundedAnimParameter,
+		_deathAnimTrigger,
+		_takeDamageAnimTrigger,
+		_kickedAnimTrigger;
 
 
 
@@ -231,6 +238,7 @@ public class Player : MonoBehaviour
 		var velocity = _rigidbody.velocity;
 		velocity.y = _jumpForce;
 		_rigidbody.velocity = velocity;
+		_anim.SetBool(_jumpAnimParameter, true);
 	}
 
 	private bool IsGrounded()

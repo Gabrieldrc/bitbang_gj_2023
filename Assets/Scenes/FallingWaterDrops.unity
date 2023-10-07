@@ -180,8 +180,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1982380154, guid: 36512356a77289749a2b76472c023928, type: 3}
     - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _deathAnimParam
+      value: Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _deathAnimTrigger
+      value: Dead
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _jumpAnimParameter
+      value: isJumping
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _kickAnimParameter
+      value: CanKick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _kickedAnimTrigger
+      value: Kicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: _walkingAnimParameter
-      value: isWalking
+      value: isRunning
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _groundedAnimParameter
+      value: isGrounded
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _takeDamageAnimTrigger
+      value: TookDamage
       objectReference: {fileID: 0}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name
