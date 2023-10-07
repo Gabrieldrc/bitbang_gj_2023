@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     #region Singleton
 
     public static GameManager instance;
+    public Range screenHeigh;
+    public Range screenWidth;
 
     private void Awake()
     {
@@ -18,6 +20,19 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        var mainCamera = Camera.main;
+        if (mainCamera == null)
+        {
+            Debug.LogError("No camera");
+            return;
+        }
+
+        var screenPosition = (Vector2)mainCamera.transform.position;
+        var height = 2f * mainCamera.orthographicSize;
+        var width = height * mainCamera.aspect;
+        screenHeigh = new Range(screenPosition.y - (height / 2), screenPosition.y + (height / 2));
+        screenWidth = new Range(screenPosition.x - (width / 2), screenPosition.x + (width / 2));
     }
 
     #endregion
