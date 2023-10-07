@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed = 10f;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _throwForceScale = 1;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private float _groundCheckRadius;
     [SerializeField] private LayerMask _whatIsGround;
@@ -64,6 +65,7 @@ public class Player : MonoBehaviour
         if (_canAttack)
         {
             Debug.Log("Atacaste");
+            _enemyDetector.ThrowEnemy(new Vector2(1,1) * _throwForceScale);
             AddJumpForce();
         }
         else
