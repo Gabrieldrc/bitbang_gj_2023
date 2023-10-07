@@ -131,21 +131,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 347690717839066660, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
-      propertyPath: _speed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 805477299162585977, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
       propertyPath: m_Name
       value: EnemyBouncer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3895579422984124483, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3895579422984124483, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4280367404547162279, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,14 +621,6 @@ PrefabInstance:
     - target: {fileID: 5078029712071931476, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409279820223860590, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6409279820223860590, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
