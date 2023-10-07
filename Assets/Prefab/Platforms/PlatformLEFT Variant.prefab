@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 19662897259895986, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.21
+      objectReference: {fileID: 0}
     - target: {fileID: 2284996445920691781, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
       propertyPath: _moveDirection.x
       value: -1
@@ -61,16 +65,20 @@ PrefabInstance:
       value: PlatformLEFT Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9219997539630766543, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1404678443, guid: 042c8ad2413d4a4498362834f05351fd, type: 3}
+    - target: {fileID: 9219997539630766543, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
       propertyPath: m_Color.b
-      value: 0.9529412
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9219997539630766543, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
       propertyPath: m_Color.g
-      value: 0.6603317
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9219997539630766543, guid: 918b5f7cf85ceed4abab8d8daf9a8aae, type: 3}
       propertyPath: m_Color.r
-      value: 0.54509807
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
