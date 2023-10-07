@@ -3,35 +3,47 @@
 public class FlyingEnemy : Enemy
 {
     [SerializeField] protected float _speed;
+	[SerializeField] private bool _following;
+	[SerializeField] private SpriteRenderer _spriteR;
 
-    private void FollowPlayer()
+	private void Update()
 	{
-		//Mirar al player (rotacion apunta al player)
-		//Perseguir al player (transform quiere llegar a ser GameManager.instance.PlayerPosRef)
-		LookAtPlayer();
+		if (_following)
+		{
+			FollowPlayer();
+		}
+		else return;
+	}
+	private void FollowPlayer()
+	{
+		Vector3 playerPosition = GameManager.instance.PlayerPosRef.position;
+
+		Vector3 direction = playerPosition - transform.position;
+		transform.Translate(_speed * Time.deltaTime * direction);
+
+		if (playerPosition.x <= transform.position.x )
+		{
+			//transform.eulerAngles = new Vector3(0, 0, 0);
+			transform.localScale = new Vector3(1, 1, 1);
+		}
+		else
+		{
+			//transform.eulerAngles = new Vector3(0, 180, 0);
+			transform.localScale = new Vector3(-1, 1, 1);
+		}
+
 
 	}
-	private void LookAtPlayer()
-	{
-		//Vector3 playerPosToLookAt = new Vector3(0, 0, GameManager.instance.PlayerPosRef.position.x);
-		//Debug.Log($"Enemy is looking at player {playerPosToLookAt}");
-		//transform.LookAt(playerPosToLookAt);
 
-
-	}
-	private void StopFollowing()
-	{
-
-	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!collision.CompareTag("Player")) return;
-		FollowPlayer();
+		_following = true;
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if (!collision.CompareTag("Player")) return;
-		StopFollowing();
+		_following = false;
 	}
 }
