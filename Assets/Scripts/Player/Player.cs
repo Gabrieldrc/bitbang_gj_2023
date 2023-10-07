@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 	[Space(10), Header("Player Animations:")]
 	[SerializeField] private Animator _anim;
 	[SerializeField]
-	private string _walkingAnimParameter,
+	private string _runningAnimParameter,
 		_jumpAnimParameter,
 		_kickAnimParameter,
 		_groundedAnimParameter,
@@ -122,6 +122,8 @@ public class Player : MonoBehaviour
 		gameObject.layer = _normalPlayerLayer;
 		_spriteRenderer.color = Color.white;
 		_timeToRecover = _maxTimeToRecover;
+		_anim.ResetTrigger(_takeDamageAnimTrigger);
+		//_anim.SetBool(_runningAnimParameter, false);
 	}
 
 	public void MovementHandler(InputAction.CallbackContext context)
@@ -130,7 +132,7 @@ public class Player : MonoBehaviour
 		if (context.canceled)
 		{
 			_hor_input = 0f;
-			_anim.SetBool(_walkingAnimParameter, false);
+			_anim.SetBool(_runningAnimParameter, false);
 		}
 
 		if (context.performed)
@@ -139,7 +141,7 @@ public class Player : MonoBehaviour
 		}
 		if (mov.x != 0)
 		{
-			_anim.SetBool(_walkingAnimParameter, true);
+			_anim.SetBool(_runningAnimParameter, true);
 			if (mov.x < 0)
 			{
 				transform.eulerAngles = new Vector3(0, 180, 0);
@@ -182,13 +184,19 @@ public class Player : MonoBehaviour
 			var velocity = _rigidbody.velocity;
 			velocity.y /= _jumpRealeseMod;
 			_rigidbody.velocity = velocity;
+
 		}
 
 		if (_isWaitingToAttack && context.performed)
 		{
 			_canAttack = true;
 		}
+		if (context.canceled)
+		{
+			_anim.SetBool(_jumpAnimParameter, false);
+		}
 	}
+
 
 	private void AttackHandler()
 	{
@@ -204,6 +212,7 @@ public class Player : MonoBehaviour
 		_rigidbody.velocity = Vector2.zero;
 		_rigidbody.gravityScale = 0f;
 		_isWaitingToAttack = true;
+		_anim.SetBool(_kickAnimParameter, true);
 
 		yield return new WaitUntil(CanInteraction);
 
@@ -216,11 +225,14 @@ public class Player : MonoBehaviour
 		{
 			Debug.Log("Atacaste");
 			_enemyDetector.ThrowEnemy(_targetDirection * _throwForceScale);
+			_anim.SetTrigger(_kickedAnimTrigger);
+
 			AddJumpForce();
 		}
 		else
 		{
 			Debug.Log("No atacaste");
+			_anim.SetBool(_kickAnimParameter, false);
 		}
 
 		_isWaitingToAttack = false;
@@ -239,12 +251,15 @@ public class Player : MonoBehaviour
 		velocity.y = _jumpForce;
 		_rigidbody.velocity = velocity;
 		_anim.SetBool(_jumpAnimParameter, true);
+		_anim.SetBool(_groundedAnimParameter, false);
+
 	}
 
 	private bool IsGrounded()
 	{
 		if (_rigidbody.velocity.y <= 0)
 		{
+			_anim.SetBool(_groundedAnimParameter, true);
 			return Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
 		}
 
@@ -253,12 +268,15 @@ public class Player : MonoBehaviour
 
 	public void TakeDamage(float damage)
 	{
+		_anim.SetTrigger(_takeDamageAnimTrigger);
+
 		_playerLiveSO.value -= damage;
 		_playerLiveSO.Notify();
 		_isDamage = true;
 		gameObject.layer = _damagePlayerLayer;
 		_spriteRenderer.color = Color.red;
 	}
+
 
 	private void ActivatePower()
 	{
