@@ -123,7 +123,6 @@ public class Player : MonoBehaviour
 		_spriteRenderer.color = Color.white;
 		_timeToRecover = _maxTimeToRecover;
 		_anim.ResetTrigger(_takeDamageAnimTrigger);
-		//_anim.SetBool(_runningAnimParameter, false);
 	}
 
 	public void MovementHandler(InputAction.CallbackContext context)
