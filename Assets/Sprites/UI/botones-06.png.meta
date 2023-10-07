@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: botones-06_0
+      name: botones-1n
       rect:
         serializedVersion: 2
         x: 30
@@ -131,7 +131,7 @@ TextureImporter:
         width: 243
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_1
+      name: botones-1h
       rect:
         serializedVersion: 2
         x: 326
@@ -152,7 +152,7 @@ TextureImporter:
         width: 243
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_2
+      name: botones-1p
       rect:
         serializedVersion: 2
         x: 623
@@ -173,7 +173,7 @@ TextureImporter:
         width: 242
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_3
+      name: botones-2n
       rect:
         serializedVersion: 2
         x: 29
@@ -194,7 +194,7 @@ TextureImporter:
         width: 245
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_4
+      name: botones-2h
       rect:
         serializedVersion: 2
         x: 325
@@ -215,7 +215,7 @@ TextureImporter:
         width: 246
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_5
+      name: botones-2p
       rect:
         serializedVersion: 2
         x: 621
@@ -236,7 +236,7 @@ TextureImporter:
         width: 246
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_6
+      name: botones-3n
       rect:
         serializedVersion: 2
         x: 30
@@ -257,7 +257,7 @@ TextureImporter:
         width: 243
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_7
+      name: botones-3h
       rect:
         serializedVersion: 2
         x: 327
@@ -278,7 +278,7 @@ TextureImporter:
         width: 242
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_8
+      name: botones-3p
       rect:
         serializedVersion: 2
         x: 623
@@ -299,7 +299,7 @@ TextureImporter:
         width: 242
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_9
+      name: botones-4n
       rect:
         serializedVersion: 2
         x: 29
@@ -320,7 +320,7 @@ TextureImporter:
         width: 245
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_10
+      name: botones-4h
       rect:
         serializedVersion: 2
         x: 325
@@ -341,7 +341,7 @@ TextureImporter:
         width: 246
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones-06_11
+      name: botones-4p
       rect:
         serializedVersion: 2
         x: 621
@@ -362,7 +362,7 @@ TextureImporter:
         width: 246
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,18 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      botones-06_0: -442536222
-      botones-06_1: 1376428301
-      botones-06_10: -278582081
-      botones-06_11: -1435055288
-      botones-06_2: 1251352370
-      botones-06_3: 657018682
-      botones-06_4: -7065477
-      botones-06_5: -1548434179
-      botones-06_6: 352712688
-      botones-06_7: -1459344858
-      botones-06_8: 1698669564
-      botones-06_9: -187815664
+      botones-1h: 1376428301
+      botones-1n: -442536222
+      botones-1p: 1251352370
+      botones-2h: -7065477
+      botones-2n: 657018682
+      botones-2p: -1548434179
+      botones-3h: -1459344858
+      botones-3n: 352712688
+      botones-3p: 1698669564
+      botones-4h: -278582081
+      botones-4n: -187815664
+      botones-4p: -1435055288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
