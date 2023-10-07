@@ -38,5 +38,4 @@ public class FallingWaterDrop : MonoBehaviour
 		Instantiate(_waterDrops[Random.Range(0, _waterDrops.Count)], dropPos, transform.rotation);
 		InicializeCooldown();
 	}
-
 }
