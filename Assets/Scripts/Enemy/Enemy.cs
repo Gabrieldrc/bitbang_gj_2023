@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    [SerializeField] private int _deadLayer;
+    protected Rigidbody2D _rigidbody;
+    [SerializeField] protected int _deadLayer;
 
-    private void Awake()
+    protected void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
