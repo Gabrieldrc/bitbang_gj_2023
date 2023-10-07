@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class SuperPower : MonoBehaviour
@@ -22,7 +23,6 @@ public class SuperPower : MonoBehaviour
 	private void UsePower()
 	{
 		StartCoroutine(CO_UsePowerEffect());
-		
 	}
 	IEnumerator CO_UsePowerEffect()
 	{
