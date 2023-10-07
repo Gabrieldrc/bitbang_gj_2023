@@ -4,18 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
+
   - Destroyer
   - WaterDrop
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Floor
-  - 
-  - 
+  - Enemy
+  - PlayerTrigger
   - 
   - 
   - 
