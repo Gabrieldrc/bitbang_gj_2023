@@ -29,12 +29,10 @@ public class FlyingEnemy : Enemy
 
 		if (playerPosition.x <= transform.position.x)
 		{
-			//transform.eulerAngles = new Vector3(0, 0, 0);
 			transform.localScale = new Vector3(1, 1, 1);
 		}
 		else
 		{
-			//transform.eulerAngles = new Vector3(0, 180, 0);
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
 
@@ -42,14 +40,5 @@ public class FlyingEnemy : Enemy
 	}
 
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (!collision.CompareTag("Player")) return;
-		_following = true;
-	}
-	private void OnTriggerExit2D(Collider2D collision)
-	{
-		if (!collision.CompareTag("Player")) return;
-		_following = false;
-	}
+	
 }
