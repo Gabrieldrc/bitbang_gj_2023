@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &24790604 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3996206464238423830, guid: b262987776648b845b3f1e973ce26658, type: 3}
+  m_PrefabInstance: {fileID: 1000975489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &187036342
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +244,8 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7836939971185242924, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -483,6 +489,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPosRef: {fileID: 1000975490}
+  _liveSO: {fileID: 11400000, guid: 37c9ad40b0d790843945ca241b7b7119, type: 2}
+  _maxliveSO: {fileID: 11400000, guid: e349d44b7ad040d4e83b055e3782b0ca, type: 2}
+  _scoreSO: {fileID: 11400000, guid: 8e038656aee6c374ea0f069fdd5b4e0f, type: 2}
+  _loseLiveScale: 2
 --- !u!4 &545325014
 Transform:
   m_ObjectHideFlags: 0
@@ -679,6 +689,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _playerLiveSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 37c9ad40b0d790843945ca241b7b7119, type: 2}
+    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 24790604}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name
       value: Player
@@ -979,9 +997,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1915193079419020303, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2810458562575870749, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700518434795005862, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
+      propertyPath: Priority
+      value: 226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700518434795005862, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
+      propertyPath: m_Volume
+      value: 0.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700518434795005862, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13fc21b566158c74fbf21646d295bd25, type: 3}
+    - target: {fileID: 3700518434795005862, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5078029712071931476, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1023,7 +1061,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7836939971185242924, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1100,7 +1139,8 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7836939971185242924, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
