@@ -2,9 +2,15 @@
 
 public class FlyingEnemy : Enemy
 {
-    [SerializeField] protected float _speed;
+	[SerializeField] protected float _speed;
 	[SerializeField] private bool _following;
 	[SerializeField] private SpriteRenderer _spriteR;
+
+	public bool Following
+	{
+		get => _following;
+		set => _following = value;
+	}
 
 	private void Update()
 	{
@@ -21,7 +27,7 @@ public class FlyingEnemy : Enemy
 		Vector3 direction = playerPosition - transform.position;
 		transform.Translate(_speed * Time.deltaTime * direction);
 
-		if (playerPosition.x <= transform.position.x )
+		if (playerPosition.x <= transform.position.x)
 		{
 			//transform.eulerAngles = new Vector3(0, 0, 0);
 			transform.localScale = new Vector3(1, 1, 1);
