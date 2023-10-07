@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2819233574689433845}
   - component: {fileID: 3966797989650608892}
   - component: {fileID: 6581404522613514058}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Water_NormalDrop
   m_TagString: WaterDrop
   m_Icon: {fileID: 0}

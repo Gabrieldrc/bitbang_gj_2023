@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1631528011371125285}
   - component: {fileID: 4558976060531281254}
   - component: {fileID: 2862769761191566862}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: TrashDrop
   m_TagString: PowerTrash
   m_Icon: {fileID: 0}
