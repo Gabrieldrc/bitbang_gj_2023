@@ -49,6 +49,12 @@ public class GameManager : MonoBehaviour
         set => _playerPosRef = value;
     }
 
+    private void Start()
+    {
+        _scoreSO.value = 0;
+        _scoreSO.Notify();
+    }
+
     private void Update()
     {
         _liveSO.value -= Time.deltaTime * _loseLiveScale;

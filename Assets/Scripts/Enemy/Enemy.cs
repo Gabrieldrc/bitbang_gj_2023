@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     public void Throw(Vector2 throwDirection)
     {
         _isAlive = false;
-        Debug.Log("Me mataron = " + _isAlive);
         gameObject.layer = _deadLayer;
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.AddForce(throwDirection, ForceMode2D.Impulse);
