@@ -18,7 +18,10 @@ public class Player : MonoBehaviour
     [SerializeField] private int _normalPlayerLayer;
     [SerializeField] private int _damagePlayerLayer;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private float _maxTranformationTime;
+    [SerializeField] private AudioClip _gritoSapucai;
 
+    private AudioSource _aSource;
     private Rigidbody2D _rigidbody;
     private float _hor_input = 0f;
     private bool _canMove = true;
@@ -29,15 +32,18 @@ public class Player : MonoBehaviour
     private Vector2 _targetDirection;
     private float _timeToRecover;
     private bool _isDamage = false;
-
+    private bool _isSuperPowerful = false;
+    private float _currentTranformationTime;
 
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _aSource = GetComponentInParent<AudioSource>();
         _gravityScale = _rigidbody.gravityScale;
         _timeAttackLeft = _maxTimeToAttack;
         _targetDirection = transform.position;
         _timeToRecover = _maxTimeToRecover;
+        _currentTranformationTime = _maxTranformationTime;
     }
 
     private void OnEnable()
@@ -69,6 +75,22 @@ public class Player : MonoBehaviour
             {
                 BackToNormal();
             }
+        }
+        else if (_isSuperPowerful)
+        {
+            _currentTranformationTime -= Time.deltaTime;
+            if (_timeToRecover <= 0)
+            {
+                BackToNormal();
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PowerTrash"))
+        {
+            ActivatePower();
         }
     }
 
@@ -199,6 +221,21 @@ public class Player : MonoBehaviour
         _isDamage = true;
         gameObject.layer = _damagePlayerLayer;
         _spriteRenderer.color = Color.red;
+    }
+
+    private void ActivatePower()
+    {
+        Debug.Log("Trash man llama");
+        //TODO animacion super
+        _aSource.PlayOneShot(_gritoSapucai);
+        _isSuperPowerful = true;
+    }
+
+    private void DeactivatePower()
+    {
+        //TODO animacion normal
+        Debug.Log("Normal man llama");
+        _isSuperPowerful = false;
     }
 
 #if UNITY_EDITOR

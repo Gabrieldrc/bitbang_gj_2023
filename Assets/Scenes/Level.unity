@@ -186,7 +186,7 @@ MonoBehaviour:
   _playerPosRef: {fileID: 785634025}
   _liveSO: {fileID: 11400000, guid: 37c9ad40b0d790843945ca241b7b7119, type: 2}
   _maxliveSO: {fileID: 11400000, guid: e349d44b7ad040d4e83b055e3782b0ca, type: 2}
-  _scoreSO: {fileID: 0}
+  _scoreSO: {fileID: 11400000, guid: 8e038656aee6c374ea0f069fdd5b4e0f, type: 2}
   _loseLiveScale: 2
 --- !u!4 &395166485
 Transform:
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -467,6 +467,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435471551}
   m_CullTransparentMesh: 1
+--- !u!1 &474886165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474886166}
+  - component: {fileID: 474886167}
+  m_Layer: 0
+  m_Name: ScoreUIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474886166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474886165}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2100742971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474886167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474886165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2030cc2c74381d45808b9247092783d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreTextValue: {fileID: 1972280945}
+  _scoreSO: {fileID: 11400000, guid: 8e038656aee6c374ea0f069fdd5b4e0f, type: 2}
 --- !u!1001 &575337387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -654,9 +700,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 435471552}
   - {fileID: 1681066369}
   - {fileID: 1409673205}
+  - {fileID: 435471552}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -944,28 +990,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: _playerLiveSO
-      value: 
-      objectReference: {fileID: 11400000, guid: 37c9ad40b0d790843945ca241b7b7119, type: 2}
-    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: _spriteRenderer
-      value: 
-      objectReference: {fileID: 2077315858}
-    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: _damagePlayerLayer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5490410381293499411, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: _normalPlayerLayer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1127,7 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78039217}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1652,11 +1678,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
---- !u!212 &2077315858 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3996206464238423830, guid: b262987776648b845b3f1e973ce26658, type: 3}
-  m_PrefabInstance: {fileID: 1471441188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100742970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,6 +1708,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1620540137}
+  - {fileID: 474886166}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121420868

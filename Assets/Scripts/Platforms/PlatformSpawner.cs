@@ -19,24 +19,10 @@ namespace Platforms
         private Range _screenHeigh;
         private Range _screenWidth;
 
-        private void Awake()
-        {
-            var mainCamera = Camera.main;
-            if (mainCamera == null)
-            {
-                Debug.LogError("No camera");
-                return;
-            }
-
-            var screenPosition = (Vector2)mainCamera.transform.position;
-            var height = 2f * mainCamera.orthographicSize;
-            var width = height * mainCamera.aspect;
-            _screenHeigh = new Range(screenPosition.y - (height / 2), screenPosition.y + (height / 2));
-            _screenWidth = new Range(screenPosition.x - (width / 2), screenPosition.x + (width / 2));
-        }
-
         private void Start()
         {
+            _screenHeigh = GameManager.instance.screenHeigh;
+            _screenWidth = GameManager.instance.screenWidth;
             _cooldown = RandomCooldown();
             _timer = _cooldown;
         }
