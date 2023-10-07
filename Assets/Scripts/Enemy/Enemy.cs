@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int _deadLayer;
     [SerializeField] private int _score;
     [SerializeField] private float _damage;
+    protected bool _isAlive = true;
+
+    public bool IsAlive => _isAlive;
 
     protected void Awake()
     {
@@ -14,6 +17,8 @@ public class Enemy : MonoBehaviour
 
     public void Throw(Vector2 throwDirection)
     {
+        _isAlive = false;
+        Debug.Log("Me mataron = " + _isAlive);
         gameObject.layer = _deadLayer;
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.AddForce(throwDirection, ForceMode2D.Impulse);
@@ -22,12 +27,26 @@ public class Enemy : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (IsAlive)
         {
-            var player = col.GetComponent<Player>();
-            if (!player.IsSuperPowerful)
+            if (col.gameObject.CompareTag("Player"))
             {
-                player.TakeDamage(_damage);
+                var player = col.GetComponent<Player>();
+                if (!player.IsSuperPowerful)
+                {
+                    player.TakeDamage(_damage);
+                }
+            }
+        }
+        else
+        {
+            if (col.gameObject.CompareTag("Enemy") && col.gameObject != gameObject)
+            {
+                var otherEnemy = col.GetComponent<Enemy>();
+                if (otherEnemy.IsAlive)
+                {
+                    otherEnemy.Throw((otherEnemy.transform.position - transform.position).normalized * 15);
+                }
             }
         }
     }

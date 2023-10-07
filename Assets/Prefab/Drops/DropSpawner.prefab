@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6558856480274432551}
   - component: {fileID: 1041507969901126344}
   m_Layer: 0
-  m_Name: WaterDropSpawner
+  m_Name: DropSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

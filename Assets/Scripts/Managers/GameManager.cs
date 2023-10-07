@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int score)
     {
-        Debug.Log(score);
         _scoreSO.value += score;
         _scoreSO.Notify();
     }
