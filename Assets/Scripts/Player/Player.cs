@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     private bool _isSuperPowerful = false;
     private float _currentTranformationTime;
 
+    public bool IsSuperPowerful => _isSuperPowerful;
+
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -79,9 +81,9 @@ public class Player : MonoBehaviour
         else if (_isSuperPowerful)
         {
             _currentTranformationTime -= Time.deltaTime;
-            if (_timeToRecover <= 0)
+            if (_currentTranformationTime <= 0)
             {
-                BackToNormal();
+                DeactivatePower();
             }
         }
     }
@@ -91,6 +93,11 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("PowerTrash"))
         {
             ActivatePower();
+        }
+        else if (collision.CompareTag("Enemy") && _isSuperPowerful)
+        {
+            var enemy = collision.GetComponent<Enemy>();
+            enemy.Throw(_targetDirection * _throwForceScale);
         }
     }
 
@@ -118,7 +125,6 @@ public class Player : MonoBehaviour
 
     public void TargetHandler(InputAction.CallbackContext context)
     {
-        // if (!_isWaitingToAttack) return;
         if (!context.performed) return;
         var device = context.control.device;
 
@@ -236,6 +242,7 @@ public class Player : MonoBehaviour
         //TODO animacion normal
         Debug.Log("Normal man llama");
         _isSuperPowerful = false;
+        _currentTranformationTime = _maxTranformationTime;
     }
 
 #if UNITY_EDITOR

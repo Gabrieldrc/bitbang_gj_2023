@@ -25,7 +25,10 @@ public class Enemy : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             var player = col.GetComponent<Player>();
-            player.TakeDamage(_damage);
+            if (!player.IsSuperPowerful)
+            {
+                player.TakeDamage(_damage);
+            }
         }
     }
 }

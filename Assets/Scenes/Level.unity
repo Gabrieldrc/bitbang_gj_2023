@@ -954,6 +954,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5276437969799261717, guid: 8e0528f78ea75314e929837925323325, type: 3}
+      propertyPath: _maxCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276437969799261717, guid: 8e0528f78ea75314e929837925323325, type: 3}
+      propertyPath: _minCooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1526,7 +1534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.data[2]
@@ -1536,6 +1544,10 @@ PrefabInstance:
       propertyPath: _waterDrops.Array.data[3]
       value: 
       objectReference: {fileID: 5450815512716912521, guid: 6696876626400c94dac460fb332176e5, type: 3}
+    - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
+      propertyPath: _waterDrops.Array.data[4]
+      value: 
+      objectReference: {fileID: 617562611270580180, guid: e48432b4e38888c43ac7e5c8165a7fc3, type: 3}
     - target: {fileID: 6558856480274432551, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
