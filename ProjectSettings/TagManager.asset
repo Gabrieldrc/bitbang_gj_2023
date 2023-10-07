@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+
+  - Destroyer
+  - WaterDrop
   - Enemy
   layers:
   - Default
