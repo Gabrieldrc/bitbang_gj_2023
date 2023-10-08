@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1280862503
-  m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingLayerID: 674543029
+  m_SortingLayer: 8
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: ae29ba1aaf59eb346ae487132a760524, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -278,7 +278,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1280862503
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1982380154, guid: 36512356a77289749a2b76472c023928, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -465,9 +465,21 @@ MonoBehaviour:
     m_ActionId: f6ff32eb-5bb6-4b59-bfcf-c7d257ad707a
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SceneManagement_Unity.PauseScreen, Fede_SceneManagement_Unity
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 259f1e4e-37d6-4558-bb28-8bb7dcd66c33
-    m_ActionName: Player/Start[/XInputControllerWindows/start,/Keyboard/escape,/Keyboard/p]
+    m_ActionName: Player/Start[/Keyboard/escape,/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -573,7 +585,7 @@ MonoBehaviour:
   _normalPlayerLayer: 3
   _damagePlayerLayer: 11
   _spriteRenderer: {fileID: 3996206464238423830}
-  _maxTranformationTime: 3
+  _maxTranformationTime: 30
   _gritoSapucai: {fileID: 8300000, guid: 668d35654a7e29243ae3bf84a02a7097, type: 3}
   _arrowUI: {fileID: 6465506089086558386}
   _anim: {fileID: 4082104917917173894}
@@ -582,6 +594,7 @@ MonoBehaviour:
   _kickAnimParameter: CanKick
   _groundedAnimParameter: isGrounded
   _deathAnimTrigger: Dead
+  _transformedAnimParameter: isTransformed
   _takeDamageAnimTrigger: TookDamage
   _kickedAnimTrigger: Kicked
 --- !u!82 &2529181989653632325
