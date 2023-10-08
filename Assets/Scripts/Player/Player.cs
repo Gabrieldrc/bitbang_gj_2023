@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+	public event Action<bool> OnSuperActivated;
+
 	[SerializeField] private float _speed = 10f;
 	[SerializeField] private float _jumpForce;
 	[SerializeField] private float _throwForceScale = 1;
@@ -288,8 +291,7 @@ public class Player : MonoBehaviour
 	{
 		_anim.SetTrigger(_takeDamageAnimTrigger);
 
-		_playerLiveSO.value -= damage;
-		_playerLiveSO.Notify();
+		GameManager.instance.AddLive(-damage);
 		_isDamage = true;
 		gameObject.layer = _damagePlayerLayer;
 		_spriteRenderer.color = Color.red;
@@ -298,8 +300,7 @@ public class Player : MonoBehaviour
 
 	private void ActivatePower()
 	{
-		Debug.Log("Trash man llama");
-		//TODO animacion super
+		OnSuperActivated?.Invoke(true);
 		_aSource.PlayOneShot(_gritoSapucai);
 		_isSuperPowerful = true;
 		_anim.SetBool(_transformedAnimParameter, true);
@@ -307,7 +308,7 @@ public class Player : MonoBehaviour
 
 	private void DeactivatePower()
 	{
-		//TODO animacion normal
+		OnSuperActivated?.Invoke(false);
 		Debug.Log("Normal man llama");
 		_isSuperPowerful = false;
 		_currentTranformationTime = _maxTranformationTime;
