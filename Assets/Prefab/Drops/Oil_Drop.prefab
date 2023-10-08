@@ -14,8 +14,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298644879666613958, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_Name
-      value: OilDrop Variant
+      value: Oil_Drop
       objectReference: {fileID: 0}
+    - target: {fileID: 6514526048958143835, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30730206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514526048958143835, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.40338147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514526048958143835, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0017634332
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514526048958143835, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16105807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529414146029820089, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f86b182f7ecb8cc4ca7b476bd80d98f4, type: 3}
     - target: {fileID: 6529414146029820089, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -30,19 +50,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7016279125477499672, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7016279125477499672, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7016279125477499672, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.028
       objectReference: {fileID: 0}
     - target: {fileID: 7016279125477499672, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.041
       objectReference: {fileID: 0}
     - target: {fileID: 7016279125477499672, guid: e844c90cdf1b5c744b264ba58c1a864c, type: 3}
       propertyPath: m_LocalPosition.z

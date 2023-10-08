@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private float _maxTranformationTime;
 	[SerializeField] private AudioClip _gritoSapucai;
 	[SerializeField] private SpriteRenderer _arrowUI;
+	[SerializeField] private PlayerAudioController _audioController;
 
 	[Space(10), Header("Player Animations:")]
 	[SerializeField]
@@ -234,7 +235,7 @@ public class Player : MonoBehaviour
 
 		if (_canAttack)
 		{
-			Debug.Log("Atacaste");
+			_audioController.PlayKickSE();
 			_enemyDetector.ThrowEnemy(_targetDirection * _throwForceScale);
 			_anim.SetTrigger(_kickedAnimTrigger);
 
@@ -242,7 +243,6 @@ public class Player : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("No atacaste");
 			_anim.SetBool(_kickAnimParameter, false);
 		}
 
