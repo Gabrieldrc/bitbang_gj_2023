@@ -1252,10 +1252,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8918699032261446434, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2111,8 +2107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a157462b7491364f9ce38b733c11e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyFollowPrefab: {fileID: 2810458562575870749, guid: b592062b4e674c047853b58f9e685f9d, type: 3}
-  _enemyNormalPrefab: {fileID: 805477299162585977, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
+  _enemyFollowPrefab: {fileID: 805477299162585977, guid: 52675aa7331a33940a92a6728b217f72, type: 3}
+  _enemyNormalPrefab: {fileID: 3187853809966328273, guid: 6c5fcc70e3cc6094d9339c3fd329846d, type: 3}
   _spawnPoints:
   - {fileID: 585620819}
   - {fileID: 7455997}

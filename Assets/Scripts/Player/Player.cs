@@ -256,7 +256,6 @@ public class Player : MonoBehaviour
 		_isWaitingToAttack = false;
 		_canAttack = false;
 		_anim.SetBool(_kickAnimParameter, false);
-		//_anim.ResetTrigger(_kickedAnimTrigger);
 	}
 
 	private bool CanInteraction()
