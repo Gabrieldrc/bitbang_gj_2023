@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        Time.timeScale = 1;
         var screenPosition = (Vector2)mainCamera.transform.position;
         var height = 2f * mainCamera.orthographicSize;
         var width = height * mainCamera.aspect;
