@@ -4029,18 +4029,6 @@ PrefabInstance:
       value: Destroyer
       objectReference: {fileID: 0}
     - target: {fileID: 2387778747333179014, guid: 248bf38574432a947929461dc2405824, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0630133
-      objectReference: {fileID: 0}
-    - target: {fileID: 2387778747333179014, guid: 248bf38574432a947929461dc2405824, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 19.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 2387778747333179014, guid: 248bf38574432a947929461dc2405824, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5713685
-      objectReference: {fileID: 0}
-    - target: {fileID: 2387778747333179014, guid: 248bf38574432a947929461dc2405824, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
