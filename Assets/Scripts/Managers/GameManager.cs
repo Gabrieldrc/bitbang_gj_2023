@@ -79,4 +79,9 @@ public class GameManager : MonoBehaviour
 
         _liveSO.Notify();
     }
+
+    public void RestartTime()
+	{
+        Time.timeScale = 1;
+	}
 }
