@@ -2768,6 +2768,10 @@ PrefabInstance:
       propertyPath: _maxTranformationTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5533718683892266451, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: _jumpVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name
       value: Player
