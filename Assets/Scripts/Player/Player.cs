@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private AudioClip _gritoSapucai;
 	[SerializeField] private SpriteRenderer _arrowUI;
 	[SerializeField] private PlayerAudioController _audioController;
+	[SerializeField] private PlayerDamageController _playerDamageController;
 
 	[Space(10), Header("Player Animations:")]
 	[SerializeField]
@@ -72,11 +73,13 @@ public class Player : MonoBehaviour
 	private void OnEnable()
 	{
 		_enemyDetector.OnEnemyDetected += AttackHandler;
+		_playerDamageController.OnTakeDamage += TakeDamageHandler;
 	}
 
 	private void OnDisable()
 	{
 		_enemyDetector.OnEnemyDetected -= AttackHandler;
+		_playerDamageController.OnTakeDamage -= TakeDamageHandler;
 	}
 
 	private void FixedUpdate()
@@ -287,7 +290,7 @@ public class Player : MonoBehaviour
 		return Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
 	}
 
-	public void TakeDamage(float damage)
+	private void TakeDamageHandler(float damage)
 	{
 		_anim.SetTrigger(_takeDamageAnimTrigger);
 
