@@ -679,7 +679,7 @@ MonoBehaviour:
   _normalPlayerLayer: 3
   _damagePlayerLayer: 11
   _spriteRenderer: {fileID: 3996206464238423830}
-  _maxTranformationTime: 30
+  _maxTranformationTime: 10
   _gritoSapucai: {fileID: 8300000, guid: 668d35654a7e29243ae3bf84a02a7097, type: 3}
   _arrowUI: {fileID: 6465506089086558386}
   _audioController: {fileID: 5533718683892266451}
@@ -805,7 +805,7 @@ MonoBehaviour:
   _kickSE: {fileID: 8300000, guid: e1ada5f5060c9934b866b6a05ffcea2a, type: 3}
   _kickVolume: 0.5
   _jumpSE: {fileID: 8300000, guid: 7e494814306873d4a9378cc75aa00971, type: 3}
-  _jumpVolume: 0.3
+  _jumpVolume: 0.1
 --- !u!82 &7356072402253910522
 AudioSource:
   m_ObjectHideFlags: 0
