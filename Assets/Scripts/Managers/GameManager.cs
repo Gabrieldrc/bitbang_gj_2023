@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private FloatValueSO _maxliveSO;
     [SerializeField] protected IntValueSO _scoreSO;
     [SerializeField] private float _loseLiveScale = 2f;
+    private bool _gameOver = false;
 
     public Transform PlayerPosRef
     {
@@ -57,13 +58,24 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _liveSO.value -= Time.deltaTime * _loseLiveScale;
-        _liveSO.Notify();
+        if (_gameOver) return;
+        AddLive(Time.deltaTime * _loseLiveScale);
     }
 
     public void AddScore(int score)
     {
         _scoreSO.value += score;
         _scoreSO.Notify();
+    }
+
+    public void AddLive(float live)
+    {
+        _liveSO.value = _liveSO.value + live < 0f ? 0 : _liveSO.value + live;
+        if (_liveSO.value == 0)
+        {
+            _gameOver = true;
+        }
+
+        _liveSO.Notify();
     }
 }
