@@ -303,6 +303,7 @@ public class Player : MonoBehaviour
 
 	private void ActivatePower()
 	{
+		_playerDamageController.active = false;
 		OnSuperActivated?.Invoke(true);
 		_aSource.PlayOneShot(_gritoSapucai);
 		_isSuperPowerful = true;
@@ -311,6 +312,7 @@ public class Player : MonoBehaviour
 
 	private void DeactivatePower()
 	{
+		_playerDamageController.active = true;
 		OnSuperActivated?.Invoke(false);
 		Debug.Log("Normal man llama");
 		_isSuperPowerful = false;

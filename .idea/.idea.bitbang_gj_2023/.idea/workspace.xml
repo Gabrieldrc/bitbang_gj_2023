@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WaterDrops/FallingWaterDrop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WaterDrops/FallingWaterDrop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WaterDrops/RainDrop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WaterDrops/RainDrop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
       <updated>1696689433624</updated>
       <workItem from="1696689442188" duration="22913000" />
       <workItem from="1696719807599" duration="1537000" />
-      <workItem from="1696770881291" duration="8019000" />
+      <workItem from="1696770881291" duration="8840000" />
     </task>
     <servers />
   </component>
