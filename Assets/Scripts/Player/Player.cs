@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private float _maxTranformationTime;
     [SerializeField] private AudioClip _gritoSapucai;
+    [SerializeField] private SpriteRenderer _arrowUI;
 
     [Space(10), Header("Player Animations:")] [SerializeField]
     private Animator _anim;
@@ -101,6 +102,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        float angulo = Mathf.Atan2(-_targetDirection.x, _targetDirection.y) * Mathf.Rad2Deg;
+        _arrowUI.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angulo)); 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PowerTrash"))

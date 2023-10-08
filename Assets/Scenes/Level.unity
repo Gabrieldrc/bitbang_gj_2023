@@ -2870,6 +2870,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6465506089086558386, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: m_SortingLayer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465506089086558386, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465506089086558386, guid: b262987776648b845b3f1e973ce26658, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 674543029
+      objectReference: {fileID: 0}
     - target: {fileID: 7751599062038208613, guid: b262987776648b845b3f1e973ce26658, type: 3}
       propertyPath: m_Name
       value: Player
