@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [DefaultExecutionOrder(-10)]
 public class GameManager : MonoBehaviour
@@ -66,4 +67,14 @@ public class GameManager : MonoBehaviour
         _scoreSO.value += score;
         _scoreSO.Notify();
     }
+
+    public void PauseHandler(InputAction.CallbackContext context)
+	{
+
+        if (context.performed)
+		{
+            //Pantalla de pausa
+            Debug.Log("Pantalla de pausa");
+		}
+	}
 }

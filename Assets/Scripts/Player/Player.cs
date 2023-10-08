@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
 
 		}
 
-	}
+	} 
 
 	public void TargetHandler(InputAction.CallbackContext context)
 	{
