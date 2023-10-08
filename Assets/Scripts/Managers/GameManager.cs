@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
         if (_liveSO.value == 0)
         {
             _gameOver = true;
+            Time.timeScale = 0f;
         }
 
         _liveSO.Notify();
