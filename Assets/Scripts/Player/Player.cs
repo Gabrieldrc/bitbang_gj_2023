@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+	public event Action<bool> OnSuperActivated;
+
 	[SerializeField] private float _speed = 10f;
 	[SerializeField] private float _jumpForce;
 	[SerializeField] private float _throwForceScale = 1;
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private AudioClip _gritoSapucai;
 	[SerializeField] private SpriteRenderer _arrowUI;
 	[SerializeField] private PlayerAudioController _audioController;
+	[SerializeField] private PlayerDamageController _playerDamageController;
 
 	[Space(10), Header("Player Animations:")]
 	[SerializeField]
@@ -69,11 +73,13 @@ public class Player : MonoBehaviour
 	private void OnEnable()
 	{
 		_enemyDetector.OnEnemyDetected += AttackHandler;
+		_playerDamageController.OnTakeDamage += TakeDamageHandler;
 	}
 
 	private void OnDisable()
 	{
 		_enemyDetector.OnEnemyDetected -= AttackHandler;
+		_playerDamageController.OnTakeDamage -= TakeDamageHandler;
 	}
 
 	private void FixedUpdate()
@@ -284,12 +290,11 @@ public class Player : MonoBehaviour
 		return Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
 	}
 
-	public void TakeDamage(float damage)
+	private void TakeDamageHandler(float damage)
 	{
 		_anim.SetTrigger(_takeDamageAnimTrigger);
 
-		_playerLiveSO.value -= damage;
-		_playerLiveSO.Notify();
+		GameManager.instance.AddLive(-damage);
 		_isDamage = true;
 		gameObject.layer = _damagePlayerLayer;
 		_spriteRenderer.color = Color.red;
@@ -298,8 +303,7 @@ public class Player : MonoBehaviour
 
 	private void ActivatePower()
 	{
-		Debug.Log("Trash man llama");
-		//TODO animacion super
+		OnSuperActivated?.Invoke(true);
 		_aSource.PlayOneShot(_gritoSapucai);
 		_isSuperPowerful = true;
 		_anim.SetBool(_transformedAnimParameter, true);
@@ -307,7 +311,7 @@ public class Player : MonoBehaviour
 
 	private void DeactivatePower()
 	{
-		//TODO animacion normal
+		OnSuperActivated?.Invoke(false);
 		Debug.Log("Normal man llama");
 		_isSuperPowerful = false;
 		_currentTranformationTime = _maxTranformationTime;

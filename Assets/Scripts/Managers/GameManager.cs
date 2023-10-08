@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (_gameOver) return;
-        AddLive(Time.deltaTime * _loseLiveScale);
+        AddLive(-(Time.deltaTime * _loseLiveScale));
     }
 
     public void AddScore(int score)

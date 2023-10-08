@@ -20,7 +20,11 @@ public class RainDrop : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D col)
 	{
-		StartCoroutine(CO_DropEffect());
+		if (col.CompareTag("Player"))
+		{
+			StartCoroutine(CO_DropEffect());
+			
+		}
 	}
 
 	private IEnumerator CO_DropEffect()
