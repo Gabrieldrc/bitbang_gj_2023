@@ -187,6 +187,7 @@ public class Player : MonoBehaviour
 	{
 		if (context.performed && IsGrounded())
 		{
+			_audioController.PlayJumpSE();
 			AddJumpForce();
 		}
 
