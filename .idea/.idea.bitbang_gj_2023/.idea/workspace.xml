@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c8ef089-1d61-4551-9095-59502c772196" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.bitbang_gj_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.bitbang_gj_2023/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Drops/Oil_Drop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Drops/Oil_Drop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Drops/TrashDrop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Drops/TrashDrop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Drops/Water_BigDrop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Drops/Water_BigDrop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Drops/Water_NormalDrop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Drops/Water_NormalDrop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Assets/game-jam-39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Assets/game-jam-39.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Diego e o grito da sapucai.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Diego e o grito da sapucai.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/kick.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/kick.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerAudioController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +49,7 @@
       <updated>1696689433624</updated>
       <workItem from="1696689442188" duration="22913000" />
       <workItem from="1696719807599" duration="1537000" />
-      <workItem from="1696770881291" duration="3983000" />
+      <workItem from="1696770881291" duration="4653000" />
     </task>
     <servers />
   </component>
