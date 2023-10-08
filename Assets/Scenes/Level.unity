@@ -4477,7 +4477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.data[2]
@@ -4486,7 +4486,7 @@ PrefabInstance:
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.data[3]
       value: 
-      objectReference: {fileID: 5450815512716912521, guid: 6696876626400c94dac460fb332176e5, type: 3}
+      objectReference: {fileID: 617562611270580180, guid: e48432b4e38888c43ac7e5c8165a7fc3, type: 3}
     - target: {fileID: 1041507969901126344, guid: 9e70738f410884a4697f6cd6377b33cc, type: 3}
       propertyPath: _waterDrops.Array.data[4]
       value: 
