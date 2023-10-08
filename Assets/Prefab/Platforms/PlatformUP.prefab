@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8399986032138098641}
   m_Layer: 7
   m_Name: PlatformUP
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
